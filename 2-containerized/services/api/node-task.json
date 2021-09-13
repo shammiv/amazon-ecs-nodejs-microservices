@@ -1,0 +1,18 @@
+{
+    "family": "node",
+    "containerDefinitions": [
+        {
+            "image": "your-repository/node:v_%BUILD_NUMBER%",
+            "name": "node",
+            "cpu": 10,
+            "memoryReservation": 256,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 80
+                }
+            ]
+        }
+    ]
+}
